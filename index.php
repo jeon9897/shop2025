@@ -75,10 +75,10 @@
                 <?php
                   if(!$userid){ //아이디값이 없다면 아래 내용을 출력
                 ?>
-                  <li><a href="order_list.php" title="주문정보"><i class="fa fa-shopping-cart"></i> 주문정보</a></li> 
-                  <li><a href="cart.php" title="장바구니"><i class="fa fa-shopping-cart"></i> 장바구니</a></li> 
-                  <li><a href="login.php" title="로그인"><i class="fa fa-user"></i> 로그인</a></li> 
-                  <li><a href="join.php" title="회원가입"><i class="fa fa-lock"></i> 회원가입</a></li> 
+                  <li><a href="order_list.php?title='주문정보'" title="주문정보"><i class="fa fa-shopping-cart"></i> 주문정보</a></li> 
+                  <li><a href="cart.php?title=장바구니" title="장바구니"><i class="fa fa-shopping-cart"></i> 장바구니</a></li> 
+                  <li><a href="login.php?=로그인" title="로그인"><i class="fa fa-user"></i> 로그인</a></li> 
+                  <li><a href="join.php?=회원가입" title="회원가입"><i class="fa fa-lock"></i> 회원가입</a></li> 
                 <?php 
                 }else{              
                 ?>
@@ -88,9 +88,9 @@
                   <li><a href="#" title=""><i class="fa fa-lock"></i>
                     <?php echo $name; echo '('. $userid; echo ')'; ?>님 환영합니다.
                   </a></li>
-                  <li><a href="order_list.php" title="주문정보"><i class="fa fa-shopping-cart"></i> 주문정보</a></li> 
-                  <li><a href="cart.php" title="장바구니"><i class="fa fa-shopping-cart"></i> 장바구니</a></li> 
-                  <li><a href="./php/logout.php" title="로그아웃"><i class="fa fa-user"></i> 로그아웃</a></li>
+                  <li><a href="order_list.php?title=주문정보" title="주문정보"><i class="fa fa-shopping-cart"></i> 주문정보</a></li> 
+                  <li><a href="cart.php?title=장바구니" title="장바구니"><i class="fa fa-shopping-cart"></i> 장바구니</a></li> 
+                  <li><a href="./php/logout.php?title=로그아웃" title="로그아웃"><i class="fa fa-user"></i> 로그아웃</a></li>
                 <?php } ?>
               </ul>
             </div>

@@ -1,6 +1,9 @@
 <?php 
 	session_start(); //세션정보 시작
+
   include('./db/dbconn.php');
+
+	$title = $_GET['title'];
 
 	if (!isset($_SESSION['mb_id'])) {
     echo "<script>alert('로그인이 필요합니다.'); location.href='login.php';</script>";
@@ -37,7 +40,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="반려동물용품 쇼핑몰">
 		<meta name="author" content="STORE BOM 쇼핑몰">
-		<title>STORE BOM - 장바구니</title>
+		<title>STORE BOM - <?= $title ?></title>
 		<link rel="shortcut icon" href="images/ico/favicon.ico">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -77,7 +80,7 @@
 									if(!$userid) {
 									?>
 										<li><a href="order_list.php"><i class="fa fa-shopping-cart"></i>주문정보</a></li>
-										<li><a href="cart.php"><i class="fa fa-shopping-cart"></i>장바구니</a></li>
+										<li><a href="cart.php?title=장바구니"><i class="fa fa-shopping-cart"></i>장바구니</a></li>
 										<li><a href="login.php"><i class="fa fa-user"></i>로그인</a></li>
 										<li><a href="sign.php"><i class="fa fa-lock"></i>회원가입</a></li>
 									<?php
